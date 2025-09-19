@@ -1,0 +1,38 @@
+<div class="lesson-detail-container">
+  <div class="container">
+    <div class="lesson-header">
+      <button class="back-btn" (click)="goBack()">← Volver a {{ category | titlecase }}</button>
+      <div class="category-info">
+        <div class="category-icon" [ngClass]="'category-' + category">
+          <span *ngIf="category === 'contabilidad'">📊</span>
+          <span *ngIf="category === 'finanzas'">💰</span>
+          <span *ngIf="category === 'marketing'">📈</span>
+          <span *ngIf="category === 'emprendimiento'">🚀</span>
+        </div>
+        <h1>{{ lesson?.title }}</h1>
+      </div>
+    </div>
+
+    <div class="lesson-content" *ngIf="lesson">
+      <div class="video-section" *ngIf="lesson.videoUrl">
+        <div class="video-placeholder">
+          <p>🎥 Video de la lección ({{ lesson.duration }} minutos)</p>
+          <p class="video-note">El video se cargaría desde: {{ lesson.videoUrl }}</p>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <div class="lesson-text" [innerHTML]="lesson.content"></div>
+      </div>
+
+      <div class="lesson-actions">
+        <button class="btn-complete">Marcar como completada</button>
+        <button class="btn-next">Siguiente lección →</button>
+      </div>
+    </div>
+
+    <div class="loading" *ngIf="!lesson">
+      Cargando lección...
+    </div>
+  </div>
+</div>

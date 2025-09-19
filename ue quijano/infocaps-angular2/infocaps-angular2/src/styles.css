@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+html{
+    font-family: sans-serif;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo Contraste */
+/* Forzar fondo negro en todas las secciones principales */
+body.modo-contraste .home,
+body.modo-contraste .container,
+body.modo-contraste .hero-section,
+body.modo-contraste .categories-section,
+body.modo-contraste .cta-section,
+body.modo-contraste .login-card,
+body.modo-contraste .signup-card 
+body.modo-contraste {
+  background-color: #000;
+  color: #fff;
+}
+
+body.modo-contraste a {
+  color: #ffff00; /* Amarillo brillante para enlaces */
+  text-decoration: underline; /* Más visible */
+}
+
+body.modo-contraste a:hover,
+body.modo-contraste a:focus {
+  color: #ffea00;
+  outline: 2px solid #ffff00; /* Para mejor enfoque */
+  outline-offset: 2px;
+}
+
+body.modo-contraste button,
+body.modo-contraste input,
+body.modo-contraste select,
+body.modo-contraste textarea {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: none;
+}
+
+body.modo-contraste button:hover,
+body.modo-contraste button:focus,
+body.modo-contraste input:focus,
+body.modo-contraste select:focus,
+body.modo-contraste textarea:focus {
+  background-color: #555;
+  border-color: #ffff00;
+  outline: none;
+  box-shadow: 0 0 5px 2px #ffff00;
+}
+
+body.modo-contraste .header,
+body.modo-contraste .footer,
+body.modo-contraste .navigation {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.modo-contraste img {
+  filter: brightness(0) invert(1); /* Invertir colores para imágenes si es apropiado */
+}
+
+/* Opcional: mejorar visibilidad de tablas y bordes */
+body.modo-contraste table,
+body.modo-contraste th,
+body.modo-contraste td {
+  border: 1px solid #fff;
+}
+
+/* Cursor visible */
+body.modo-contraste *:focus {
+  outline: 3px solid #ffff00;
+  outline-offset: 2px;
+}

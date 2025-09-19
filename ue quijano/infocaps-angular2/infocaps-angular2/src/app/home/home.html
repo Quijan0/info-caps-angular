@@ -1,0 +1,46 @@
+<div class="home">
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>¡Bienvenido a InfoCaps¡</h1>
+          <h2>Aprende algo nuevo cada día.</h2>
+          <p>¿sabías que el 60% del cuerpo humano es agua?</p>
+          <button class="btn btn-primary">Explora cápsulas</button>
+        </div>
+        <div class="hero-image">
+          <div class="infocaps-logo">
+            
+           
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <h2>Categorías</h2>
+      <div class="categories-grid">
+        <div class="category-card" *ngFor="let category of categories">
+          <div class="category-icon" [ngClass]="'category-' + category.name.toLowerCase()">
+            <span>{{ category.icon }}</span>
+          </div>
+          <h3>{{ category.name }}</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+      <div class="cta-content">
+        <h2>Aprende algo nuevo todos los días en menos de 5 minutos</h2>
+        <div class="cta-buttons">
+          <a routerLink="/login"><button class="btn btn-primary">Empieza ahora</button>
+            </a>
+          <a routerLink="/signup" class="register-link">Regístrate</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="signup-container">
+  <div class="signup-card">
+    <div class="signup-header">
+      <div class="logo">InfoCaps</div>
+      <h2>Crear cuenta</h2>
+    </div>
+    
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">Nombre</label>
+          <input
+            type="text"
+            id="firstName"
+            formControlName="firstName"
+            placeholder="Ingrese su nombre"
+            [class.error]="signupForm.get('firstName')?.invalid && signupForm.get('firstName')?.touched"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Apellido</label>
+          <input
+            type="text"
+            id="lastName"
+            formControlName="lastName"
+            placeholder="Ingrese su apellido"
+            [class.error]="signupForm.get('lastName')?.invalid && signupForm.get('lastName')?.touched"
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Ingrese su email"
+          [class.error]="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="Ingrese su contraseña"
+          [class.error]="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar Contraseña</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          formControlName="confirmPassword"
+          placeholder="Confirme su contraseña"
+          [class.error]="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched"
+        >
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="loading">
+        Crear Cuenta
+      </button>
+    </form>
+
+    <div class="login-section">
+      <p>¿Ya tienes cuenta?</p>
+      <a routerLink="/login" class="login-link">Inicia sesión aquí</a>
+    </div>
+  </div>
+</div>

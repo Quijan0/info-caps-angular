@@ -1,0 +1,20 @@
+<div class="category-container">
+  <div class="container">
+    <div class="category-header">
+      <div class="category-icon" [ngClass]="'category-' + category">
+        <span>{{ categoryIcon }}</span>
+      </div>
+      <h1>{{ category | titlecase }}</h1>
+    </div>
+
+    <div class="lessons-list">
+      <div class="lesson-card" *ngFor="let lesson of lessons">
+        <div class="lesson-content">
+          <p class="lesson-text">{{ lesson.title }}</p>
+          <p class="lesson-description">{{ lesson.description }}</p>
+        </div>
+        <button class="btn-explore" (click)="exploreLesson(lesson)">Indaga más</button>
+      </div>
+    </div>
+  </div>
+</div>

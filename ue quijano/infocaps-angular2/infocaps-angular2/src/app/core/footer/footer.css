@@ -1,0 +1,32 @@
+.footer {
+  background: #4a90e2;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-content p:first-child {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 20px;
+  }
+  
+  .footer-content p {
+    font-size: 12px;
+  }
+}

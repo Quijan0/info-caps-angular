@@ -1,0 +1,38 @@
+.accessibility-controls {
+  position: fixed;
+  top: 50%; 
+  right: 10px; 
+  transform: translateY(-50%); 
+  z-index: 1000;
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+  align-items: center;
+}
+
+.accessibility-controls button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  width: 60px;  
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.accessibility-controls button:hover {
+  background: #0056b3;
+}
+
+
+.accessibility-controls button img {
+  width: 20px; /* tamaño imagen pequeña */
+  height: 20px;
+  display: block;
+}

@@ -1,0 +1,146 @@
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.signup-card {
+  background: #b8d4f0;
+  padding: 60px 50px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.signup-header {
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.logo::before {
+  content: '';
+  width: 16px;
+  height: 32px;
+  background: #4a90e2;
+  border-radius: 8px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.signup-header h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  font-weight: normal;
+  margin: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.3);
+}
+
+.form-group input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: #4a90e2;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #357abd;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.login-section p {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .signup-card {
+    padding: 40px 30px;
+  }
+}
