@@ -1,80 +1,152 @@
-/* You can add global styles to this file, and also import other style files */
-html{
-    font-family: sans-serif;
+/* Estilos globales para Angular */
+html {
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body {
+  margin: 0;
+  padding: 0;
   transition: background-color 0.3s, color 0.3s;
 }
 
 /* Modo Contraste */
-/* Forzar fondo negro en todas las secciones principales */
+body.modo-contraste,
 body.modo-contraste .home,
 body.modo-contraste .container,
 body.modo-contraste .hero-section,
 body.modo-contraste .categories-section,
 body.modo-contraste .cta-section,
 body.modo-contraste .login-card,
-body.modo-contraste .signup-card 
-body.modo-contraste {
-  background-color: #000;
-  color: #fff;
+body.modo-contraste .signup-card,
+body.modo-contraste .header,
+body.modo-contraste .footer,
+body.modo-contraste .navigation,
+body.modo-contraste table,
+body.modo-contraste th,
+body.modo-contraste td {
+  background-color: #000;  /* Fondo negro */
+  color: #ffea00;             /* Texto blanco */
 }
 
+/* Enlaces en modo contraste */
 body.modo-contraste a {
-  color: #ffff00; /* Amarillo brillante para enlaces */
-  text-decoration: underline; /* Más visible */
+  color: #ffff00;  /* Amarillo brillante para enlaces */
+  text-decoration: underline;
 }
 
 body.modo-contraste a:hover,
 body.modo-contraste a:focus {
   color: #ffea00;
-  outline: 2px solid #ffff00; /* Para mejor enfoque */
+  outline: 2px solid #ffff00;
   outline-offset: 2px;
 }
 
+/* Estilo de botones, inputs y selects */
 body.modo-contraste button,
 body.modo-contraste input,
 body.modo-contraste select,
 body.modo-contraste textarea {
-  background-color: #333;
-  color: #fff;
-  border: 2px solid #fff;
+  background-color: #333;  /* Fondo gris oscuro */
+  color: #ffea00;             /* Texto blanco */
+  border: 2px solid #ffea00;
   box-shadow: none;
 }
 
+/* Estilo de foco para botones, inputs y selects */
 body.modo-contraste button:hover,
 body.modo-contraste button:focus,
 body.modo-contraste input:focus,
 body.modo-contraste select:focus,
 body.modo-contraste textarea:focus {
-  background-color: #555;
+  background-color: #555;  /* Fondo más claro en foco */
   border-color: #ffff00;
   outline: none;
   box-shadow: 0 0 5px 2px #ffff00;
 }
 
-body.modo-contraste .header,
-body.modo-contraste .footer,
-body.modo-contraste .navigation {
-  background-color: #000;
-  color: #fff;
-  border-color: #fff;
-}
-
+/* Invertir imágenes en modo contraste */
 body.modo-contraste img {
-  filter: brightness(0) invert(1); /* Invertir colores para imágenes si es apropiado */
+  filter: brightness(0) invert(1);
 }
 
-/* Opcional: mejorar visibilidad de tablas y bordes */
+/* Mejorar visibilidad de tablas */
 body.modo-contraste table,
 body.modo-contraste th,
 body.modo-contraste td {
   border: 1px solid #fff;
 }
 
-/* Cursor visible */
+/* Cursor visible en foco */
 body.modo-contraste *:focus {
   outline: 3px solid #ffff00;
   outline-offset: 2px;
 }
+
+/* Estilos adicionales si los componentes no lo toman */
+::ng-deep .modo-contraste .header,
+::ng-deep .modo-contraste .footer,
+::ng-deep .modo-contraste .navigation,
+::ng-deep .modo-contraste .home,
+::ng-deep .modo-contraste .container {
+  background-color: #000;
+  color: #ffea00;
+}
+/* Estilo de contraste aplicado globalmente cuando se activa la clase en <body> */
+body.modo-contraste {
+  background-color: #000;
+  color: #ffff00;
+}
+
+/* TEXTOS */
+body.modo-contraste h1,
+body.modo-contraste h2,
+body.modo-contraste h3,
+body.modo-contraste p,
+body.modo-contraste span,
+body.modo-contraste label,
+body.modo-contraste a,
+body.modo-contraste li,
+body.modo-contraste td,
+body.modo-contraste th {
+  color: #ffff00 !important;
+}
+
+/* ENLACES */
+body.modo-contraste a {
+  text-decoration: underline;
+  color: #ffff00 !important;
+}
+body.modo-contraste a:hover {
+  color: #ffea00 !important;
+}
+
+/* FORMULARIOS */
+body.modo-contraste input,
+body.modo-contraste select,
+body.modo-contraste textarea {
+  background-color: #222 !important;
+  color: #ffff00 !important;
+  border: 1px solid #ffff00 !important;
+}
+
+/* BOTONES */
+body.modo-contraste button {
+  background-color: #333 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+body.modo-contraste button:hover {
+  background-color: #444 !important;
+  color: #ffea00 !important;
+  border-color: #ffea00 !important;
+}
+
+/* TABLAS */
+body.modo-contraste table,
+body.modo-contraste th,
+body.modo-contraste td {
+  border: 1px solid #ffff00 !important;
+}
+
+

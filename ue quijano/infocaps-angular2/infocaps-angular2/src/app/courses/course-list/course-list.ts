@@ -22,7 +22,6 @@ export class CourseListComponent implements OnInit {
       title: '¿Sabías que Tutankamón se convirtió en faraón de Egipto con solo 9 años?',
       description: 'Su tumba fue hallada en 1922 casi intacta, ¡y se volvió uno de los descubrimientos más famosos de la arqueología!',
       content: '', // Contenido completo que vendrá del backend
-      videoUrl: '', // URL del video que vendrá del backend
       duration: 5 // Duración en minutos
     },
     {
@@ -30,7 +29,6 @@ export class CourseListComponent implements OnInit {
       title: '¿Sabías que Tutankamón se convirtió en faraón de Egipto con solo 9 años?',
       description: 'Su tumba fue hallada en 1922 casi intacta, ¡y se volvió uno de los descubrimientos más famosos de la arqueología!',
       content: '',
-      videoUrl: '',
       duration: 5
     },
     {
@@ -38,7 +36,6 @@ export class CourseListComponent implements OnInit {
       title: '¿Sabías que Tutankamón se convirtió en faraón de Egipto con solo 9 años?',
       description: 'Su tumba fue hallada en 1922 casi intacta, ¡y se volvió uno de los descubrimientos más famosos de la arqueología!',
       content: '',
-      videoUrl: '',
       duration: 5
     },
     {
@@ -46,7 +43,6 @@ export class CourseListComponent implements OnInit {
       title: '¿Sabías que Tutankamón se convirtió en faraón de Egipto con solo 9 años?',
       description: 'Su tumba fue hallada en 1922 casi intacta, ¡y se volvió uno de los descubrimientos más famosos de la arqueología!',
       content: '',
-      videoUrl: '',
       duration: 5
     }
   ];

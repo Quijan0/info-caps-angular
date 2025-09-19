@@ -10,7 +10,8 @@ import { AccessibilityToolbar } from './accessibility-toolbar/accessibility-tool
   standalone: true,
   imports: [CommonModule, RouterModule, HeaderComponent, FooterComponent, AccessibilityToolbar],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+
 })
 export class AppComponent {
   title = 'EduPlatform';
